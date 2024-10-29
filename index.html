@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tax Form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+</head>
+<body>
+    <div id="myapp">
+        <header class="title">
+            <h1><strong></strong>2023 Simplified Tax Form</strong></h1>
+        </header>
+        <br>
+        <table class="table is-bordered is-fullwidth is-striped">
+            <tbody>
+            <tr class="row-1">
+                <td rowspan="6">Income</td>
+                <td><strong>1 </strong>Wages, salaries, and tips. This should be shown in box 1 of your Form(s) W-2. Attach your Form(s) W-2</td>
+                <td>
+                    <input name="value-1">
+                </td>
+            </tr>
+            <tr class="row-2">
+                <td><strong>2 </strong>Taxable interest from 1099 form</td>
+                <td>
+                    <input name="value-2">
+                </td>
+            </tr>
+            <tr class="row-3">
+                <td><strong>3 </strong>Other income not included in 1 and 2</td>
+                <td>
+                    <input name="value-3">
+                </td>
+            </tr>
+            <tr class="row-4">
+                <td><strong>4 </strong>Add lines 1, 2, and 3. This is you adjusted gross income</td>
+                <td><input name="value-4" readonly/></td>
+            </tr>
+            <tr class="row-5">
+                <td><strong>5 </strong>If this is a joint return, add your spose as a dependent. Write $13,850 for an individual return and $27,700 for a joint return
+                <input id="checkbox" type="checkbox" />Spouse</label>
+                <td><input name="value-5" value="13850" readonly/></td>
+            </tr>
+            <tr class="row-6">
+                <td><strong>6 </strong>Subtract line 5 from line 4. If line 5 is larger than line 4, enter -0-. This is your taxable income.</td>
+                <td><input name="value-6" readonly/></td>
+            </tr>
+            <tr class="row-7">
+                <td rowspan="6">Payments, Credits, and Tax</td>
+                <td><strong>7 </strong>Federal income tax withheld from Form(s) W-2 and 1099.</td>
+                <td>
+                    <input name="value-7">
+                </td>
+            </tr>
+            <tr class="row-8">
+                <td><strong>8 </strong>Earned income credit (EIC)</td>
+                <td>
+                    <input name="value-8">
+                </td>
+            </tr>
+            <tr class="row-9">
+                <td><strong>9 </strong>Add lines 7 and 8a. These are your total payments and credits</td>
+                <td><input name="value-9" readonly/></td>
+            </tr>
+            <tr class="row-10">
+                <td><strong>10 </strong>Tax. Use the amount on line 6 above to find your tax in the tax table instructions. Then enter the tax from the table on this line.</td>
+                <td><input name="value-10" readonly/></td>
+            </tr>
+            <tr class="row-11">
+                <td><strong>11 </strong>Other taxes</td>
+                <td>
+                    <input name="value-11">
+                </td>
+            </tr>
+            <tr class="row-12">
+                <td><strong>12 </strong>Add lines 10 and 11. This is your total tax.</td>
+                <td><input name="value-12" readonly/></td>
+            </tr>
+            <tr class="row-13">
+                <td>Refund</td>
+                <td><strong>13 </strong>If line 9 is larger than line 12, subtract line 12 from line 9. This is your refund. If Form 8888 is attached, check here</td>
+                <td><input name="value-13" readonly/></td>
+            </tr>
+            <tr class="row-14">
+                <td>Amount you owe</td>
+                <td><strong>14 </strong>If line 12 is larger than line 9, subtract line 9 from line 12, This is the amount you owe, For details on how to pay, see instructions.</td>
+                <td><input name="value-14" readonly/></td>
+            </tr>
+                    
+            </tbody>
+    
+        </table>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="taxform.js"></script>
+</body>
+</html>
